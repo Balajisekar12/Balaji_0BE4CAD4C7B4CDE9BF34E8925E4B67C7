@@ -1,13 +1,12 @@
-def factorial(n):
- 
-    # base case: if `n` is 0 or 1
-    if n < 1:
-        return 1
-    # use the recurrence relation
-    return n * factorial(n - 1)
- 
- 
-if __name__ == '__main__':
- 
-    n = 6
-    print(f'The Factorial of {n} is', factorial(n))
+#Implement a recursive function to calculate the factorial of a given number.
+
+
+def fact_rect(n):
+  if n == 0 or n == 1:
+    return 1
+  else:
+    return n * fact_rect(n - 1)
+
+number = int(input("Enter a number:"))
+res = fact_rect(number)
+print("The factorial of {} is {}".format(number, res))
